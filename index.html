@@ -16,17 +16,22 @@
 
 <body>
     <div class="main-container">
+
+       <!--Balise header contenant le logo et 2 boutons pour la navigation--> 
         <header>
            <img src="./images/logo/Booki.png"  alt="Petit logo">
            <nav>
-            <input type="submit" value="Hébergements"> 
-            <input type="submit" value="Activités"> 
+           <a href="#ancre_hebergement"> Hébergement </a> 
+           <a href="#ancre_activites"> Activités </a> 
            </nav>
         </header>
 
         <main>
+
+        <!--Formulaire de recherche par ville avec filtres-->
             <form method="get" action="">
                
+             <!--Moteur de recherche par ville-->   
                 <section class="moteur_recherche">
                     <H2> Trouvez votre hébergement pour des vacances de rêve </H2> 
                     En plein centre-ville ou en pleine nature
@@ -37,6 +42,7 @@
                     </p>
                 </section> 
                
+             <!--Barre de filtre des résultats-->  
                 <section classe="barre_filtre">
                     <strong> Filtres </strong>
                     <button type="button"> <img src="./images/icones/price.svg" height ="20" width="20" /> Economique</button>
@@ -46,12 +52,14 @@
                  <br>
                 </section>
             
+            <!--Information sur le nb de logements par ville-->
             <img src="./images/icones/info.svg" />
             Plus de 500 logements sont disponibles dans cette ville
             </form>
 
             <div class="hebergements-and-populaires">
-                <section class="hebergements">
+                
+                <section class="hebergements" id="ancre_herbergement">
                     <h2 class="section-title">Hébergements</h2>
                     
                     <div class="hebrgements-cards">
@@ -250,7 +258,7 @@
                 </section>
             </div>
 
-            <div class="Activites">
+            <div class="Activites" id="ancre_activites">
                 <h2 class="section-title">Activités à Marseille</h2>
                     
                 <div class="hebrgements-cards">
