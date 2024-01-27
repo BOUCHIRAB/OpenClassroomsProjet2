@@ -62,8 +62,8 @@ a {
 .autre_texte {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 3%;
- }
+    margin: 20px 0 0 0;
+    }
 
 
 /***** Mise en forme des lignes d'information *********/
@@ -164,10 +164,12 @@ input::placeholder {
 /*Mise en forme de la barre de filtre*/
 .barre_filtre{
     display: flex;
-    align-items:baseline;
-    flex-flow: row wrap;
-    }
+    align-items: baseline;
+   }
 
+.menu_filtre {
+    display: flex;
+    }
 .btn_filtre {
     background-color: white;
     border : 2px solid #D9D9D9;
@@ -331,9 +333,6 @@ input::placeholder {
 
 .activites-cards .card-content {
     width: 100%;    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
 }
 
@@ -380,3 +379,81 @@ ul{
 }
 
 
+/***************************DEFINITION DES MEDIA QUERY**********************************/
+
+/*FORMAT TABLETTE*/
+
+
+@media (min-width: 767.99px) and (max-width: 1024px) {
+
+    .hebergements-and-populaires {
+       flex-direction: column;
+        width: 100%;
+    }
+
+.btn_filtre {
+    font-size: 16px;
+    margin-left:0 5px 0 0;
+    }
+   
+    .barre_filtre{
+        flex-direction: column;
+      }
+
+      .hebergements-and-populaires {
+        flex-flow: row wrap;
+        width: 100%;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+    .hebergements-cards a {
+        width:30%;
+    }
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width:30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+
+    
+
+.activites {
+   flex-direction: row; 
+     
+}
+.activites-cards .card {
+    margin-top: 33px;
+    width: 200px;    
+ }
+ 
+
+.activites-cards img {
+    width: 100%;
+    height: 200px;   
+}
+
+.activites-cards .card-content {
+    height: 40px;
+}
+        
+}
