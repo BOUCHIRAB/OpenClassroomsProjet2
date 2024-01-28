@@ -111,13 +111,14 @@ a {
 
 /* Mise en forme de la barre de recherche*/
 .barre_recherche {
+    display:flex;
     margin-bottom: 30px; 
   }
 
 .fa-location-dot {
     color : black; 
     background-color: #F2F2F2;
-    padding : 15px 18px 15px 17px;;
+    padding : 15px;
     border-radius: 30% 0% 0% 30%;
 }
 
@@ -130,8 +131,9 @@ a {
     border-bottom: 1px solid var(--main-bg-color);
     border-left: 0;
     border-right: 0;
-    padding : 11px 10px 13px 0px;
-    margin-left :-2px;   
+    padding : 11px 10px 10px 0px;
+    margin-left :0px;   
+    
 }
 
 input::placeholder {
@@ -144,8 +146,10 @@ input::placeholder {
         color : white; 
         background-color: var(--main-color);
         padding:  15px 15px 15px 15px;    
+        width: 20px;
         border-radius: 30%; 
-        filter: drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.1));    
+        filter: drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.1));  
+         
 }
 
 
@@ -156,8 +160,8 @@ input::placeholder {
         font-size: 18px;
         font-weight: 500;
         border: 0;
-        padding : 11.5px 10px 13px 10px;      
-        border-radius: 0 10px 10px 0;
+        padding : 15px;      
+        border-radius: 0 12px 12px 0;
 }
 
 
@@ -386,12 +390,8 @@ ul{
 
 @media (min-width: 767.99px) and (max-width: 1024px) {
 
-    .hebergements-and-populaires {
-       flex-direction: column;
-        width: 100%;
-    }
 
-.btn_filtre {
+    .btn_filtre {
     font-size: 16px;
     margin-left:0 5px 0 0;
     }
@@ -401,9 +401,10 @@ ul{
       }
 
       .hebergements-and-populaires {
-        flex-flow: row wrap;
-        width: 100%;
-    }
+        flex-direction: column;
+         width: 100%;
+     }
+     
 
     .hebergements {
         width: 100%;
@@ -433,10 +434,7 @@ ul{
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
-
-
     
-
 .activites {
    flex-direction: row; 
      
@@ -455,5 +453,124 @@ ul{
 .activites-cards .card-content {
     height: 40px;
 }
+     
+}
+
+@media (max-width: 767.98px) {
+    body {
+        margin:0;
+    }
+    .main-container {
+        padding: 0 ;
         
+    }
+
+    form{
+        padding-left: 10px;
+    }
+
+    .cl_header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cl_nav {      
+         display :flex;
+         justify-content: space-around;
+      }
+
+    .nav1 {             
+        padding : 5% 10% 5% 10%;
+    }
+ 
+    .nav1:hover {
+        border-bottom: 2px solid var(--main-color);
+        border-top :0;
+        color : var(--main-color);
+      }
+
+
+      .btn_recherche { 
+        display : none}
+
+        .fa-magnifying-glass {
+            display: block;
+          }
+
+      .btn_filtre {
+        font-size: 13px;
+        text-align: left;
+        padding: 15px 10px 15px 10px ;
+        width :110px  ;
+        }
+       
+        
+
+        .barre_filtre{
+            flex-direction: column;
+          }
+    
+          .menu_filtre {
+           flex-flow: row wrap;
+           
+            }
+
+        .hebergements-and-populaires section {                
+            border-radius: 0px;               
+             }
+            
+        .hebergements-and-populaires {
+            flex-direction :column-reverse;
+            width: 100%;
+            border-radius: 0%;
+               
+            } 
+          
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+        }
+
+    .hebergements  {
+        width: 100%;
+        }
+
+    .hebergements-and-populaires .hebergements {
+            background-color: white;
+            }
+
+            
+.hebergements-cards {
+    justify-content: center;   
+      
+}
+.hebergements-cards .card {
+    margin-top: 10px;
+    width: 350px;
+   }
+
+
+   
+.activites {
+    flex-direction: row; 
+   margin :10%
+      
+ }
+ .activites-cards .card {
+     margin-top: 10px;
+     width: 350px;    
+  }
+  
+ 
+ .activites-cards img {
+     width: 100%;
+     height: 140px;   
+ }
+ 
+ .menu_footer {
+    flex-direction: row; 
+    padding :0 0 0% 10%;
+ }
+ 
 }
