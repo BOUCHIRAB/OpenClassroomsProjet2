@@ -421,7 +421,7 @@ ul {
 }
 
 
-/***************************DEFINITION DES MEDIA QUERY**********************************/
+/***************************DEFINITION DES MEDIA QUERIES**********************************/
 
 /********************FORMAT TABLETTE*****************************/
 @media (max-width: 1024px) {
@@ -478,7 +478,7 @@ ul {
 /*Affichage des cards populaires en ligne et ajsutement des tailles*/
 .populaires-cards {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;    
     justify-content: space-between;
     margin-bottom: 12px;
 }
@@ -530,7 +530,7 @@ ul{
 
 /*************** Adaptation mobile **********************/
 
-@media (min-width: 320px) and (max-width: 767.98px) {
+@media  (max-width: 767.98px) {
 
 
 body {
@@ -648,7 +648,7 @@ form{
 }
 
 .populaires-cards {
-    flex-direction :column;    
+    flex-direction :column;
     padding-right: 18px;  
 }
 
